@@ -55,13 +55,13 @@ app.get('/product/all', async (req, res) => {
 })
 
 app.post('/product/create', (req, res) => {
-    const {name, type, quantity, cost} = req.body
+    const {name, type, quantity, price} = req.body
 
     const product = new productModel({
         name,
         type,
         quantity,
-        cost
+        price
     })
 
     product.save()
