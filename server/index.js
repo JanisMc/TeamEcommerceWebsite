@@ -73,4 +73,41 @@ app.post('/product/create', (req, res) => {
     })
 })
 
+app.delete('/product/delete/:id', (req, res) => {
+    productModel.deleteOne({_id: req.params.id}, (err) => {
+        if (err) {
+            res.send({
+                success: false,
+                message: err
+            })
+        } else {
+            res.send({
+                success: true,
+                message: 'Product was removed successfully'
+            })
+        }
+    })
+})
+
+app.put('/product/update/:id', async (req, res) => {
+    let {name, type, quantity, price} = req.body
+
+    if (!name) {name = undefined}
+    if (!type) {type = undefined}
+    if (!quantity) {quantity = undefined}
+    if (!price) {price = undefined}
+
+    let result = await productModel.updateOne({_id: req.params.id}, {
+        name, 
+        type, 
+        quantity, 
+        price
+    }, {omitUndefined: true})
+
+    res.send({
+        success: true,
+        message: `${result.nModified} document changed`
+    })
+})
+
 app.listen(3001)
