@@ -1,14 +1,12 @@
 import React from 'react'
-import './Home.css';
-import ProductCard from '../components/main/productCard/productCard'
-import navbar from '../components/navbar'
+import ProductCard from './main/productCard/ProductCard'
+// import './Home.css';
 
-const App = () => {
+
+const Home = () => {
     return (
         <div className="App">
-            <Navbar/>
             
-            <Main/>
 
             <ProductCard imgProduct = "LaptopPreview" name = "Laptop"/>
             <ProductCard imgProduct = "DesktopPreview" name = "Desktop"/>
@@ -17,10 +15,10 @@ const App = () => {
             <ProductCard imgProduct = "AccessoriesPreview" name = "Accesories"/>
             
            
-            <Footer/>
+            {/* <Footer/> */}
       
         </div>
     );
 }
 
-export default App
+export default Home

@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../../../images'
+import Image from '../../img/Image'
 
 
 const productImage = (props) => {
