@@ -1,6 +1,6 @@
 import React from 'react'
 import './productCard.css'
-import ProductImage from 
+import ProductImage from '../productImage/productImage'
 
 const productCard = (props) => {
     return (
@@ -12,4 +12,4 @@ const productCard = (props) => {
     )
 }
 
-export default Card
+export default productCard
