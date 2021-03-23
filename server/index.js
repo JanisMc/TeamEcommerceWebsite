@@ -5,7 +5,7 @@ const bodyParser = require ('body-parser')
 // const MongoStore = require ('connect-mongo')
 const cors = require ('cors')
 
-// const mainRouter = require('./routes/mainRouter')
+const mainRouter = require('./routes/mainRouter')
 const productModel = require('./models/productModel')
 
 const app = express()
@@ -31,7 +31,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-// app.use('/', mainRouter)
+app.use('/', mainRouter)
 
 app.get('/product/all', async (req, res) => {
     let products = await productModel.find({})

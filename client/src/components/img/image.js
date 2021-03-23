@@ -1,4 +1,4 @@
-import './Image.css'
+// import './Image.css'
 import LaptopPreview from '../../images/LaptopPreview.png'
 import DesktopPreview from '../../images/DesktopPreview.png'
 import MobilesPreview from '../../images/MobilesPreview.png'

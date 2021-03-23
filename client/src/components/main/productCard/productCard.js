@@ -2,7 +2,7 @@ import React from 'react'
 import './productCard.css'
 import ProductImage from './ProductImage'
 
-const productCard = (props) => {
+const ProductCard = (props) => {
     return (
         <div className = "productCard">
             <ProductImage img = {props.imgProduct} /> 
@@ -12,4 +12,4 @@ const productCard = (props) => {
     )
 }
 
-export default productCard
+export default ProductCard
