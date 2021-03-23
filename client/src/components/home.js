@@ -1,9 +1,9 @@
 import React from 'react'
 import './Home.css';
-import ProductCard from '../components/main/productCard/productCard'
+import ProductCard from './main/productCard/ProductCard'
 import navbar from '../components/navbar'
 
-const App = () => {
+const home = () => {
     return (
         <div className="App">
             <Navbar/>
@@ -23,4 +23,4 @@ const App = () => {
     );
 }
 
-export default App
+export default home

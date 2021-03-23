@@ -1,6 +1,6 @@
 import React from 'react'
 import './productCard.css'
-import ProductImage from '../productImage/productImage'
+import ProductImage from './ProductImage'
 
 const productCard = (props) => {
     return (
