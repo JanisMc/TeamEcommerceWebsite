@@ -9,7 +9,6 @@ const Home = () => {
             
 
             <ProductCard imgProduct = "LaptopPreview" name = "Laptop"/>
-            
             <ProductCard imgProduct = "DesktopPreview" name = "Desktop"/>
             <ProductCard imgProduct = "MobilesPreview" name = "Mobiles"/>
             <ProductCard imgProduct = "SmartWatchesPreview" name = "Smartwatches"/>
