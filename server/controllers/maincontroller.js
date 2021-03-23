@@ -5,6 +5,6 @@
 // const UserModel = require ('../models/userModel')
 
 exports.getIndex = (req, res) => {
-    console.log(req.session)
+    // console.log(req.session)
     res.render('index')
 }
