@@ -2,7 +2,7 @@ import React from 'react'
 import Image from '../../img/Image'
 
 
-const productImage = (props) => {
+const ProductImage = (props) => {
     return (
         <div className = "productImage">
             <Image img = {props.img} class = "productImg"/>
@@ -10,4 +10,4 @@ const productImage = (props) => {
     )
 }
 
-export default productImage
+export default ProductImage
