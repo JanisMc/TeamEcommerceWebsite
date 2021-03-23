@@ -1,19 +1,24 @@
 import './App.css';
 import Home from './components/Home'
-// import ProductCard from './components/main/productCard/ProductCard'
-import Navbar from './components/navbar/navbar'
+import ProductCard from './components/main/productCard/ProductCard'
+import Navbar from './components/navbar/Navbar'
 // import ProductsPage from './components/ProductsPage/ProductsPage'
 // import {useEffect, useState} from 'react'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 
 const App = () => {
     return (
-        <>
+        <BrowserRouter>
             <Navbar/>
-            <Home/>
+            <Switch>
+                <Route path = "/" exact component={Home}/>
+                <Route path = "/product" exact component={ProductCard}/>
+            </Switch>
+            
             {/* <ProductsPage/> */}
             {/* <Main/> */}
-        </>
+        </BrowserRouter>
     )
 } 
 export default App;
