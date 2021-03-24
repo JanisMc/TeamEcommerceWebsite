@@ -33,6 +33,14 @@ app.use(bodyParser.json())
 
 app.use('/', mainRouter)
 
+app.get('/products/:type', async (req, res) => {
+    let data = await productModel.find({type:req.params.type})
+
+    res.send({
+        data: data
+    })
+})
+
 app.get('/product/all', async (req, res) => {
     let products = await productModel.find({})
 
@@ -61,7 +69,8 @@ app.post('/product/create', (req, res) => {
         name,
         type,
         quantity,
-        price
+        price,
+        description
     })
 
     product.save()
@@ -96,12 +105,14 @@ app.put('/product/update/:id', async (req, res) => {
     if (!type) {type = undefined}
     if (!quantity) {quantity = undefined}
     if (!price) {price = undefined}
+    if (!description) {description = undefined}
 
     let result = await productModel.updateOne({_id: req.params.id}, {
         name, 
         type, 
         quantity, 
-        price
+        price,
+        description
     }, {omitUndefined: true})
 
     res.send({
@@ -109,5 +120,7 @@ app.put('/product/update/:id', async (req, res) => {
         message: `${result.nModified} document changed`
     })
 })
+
+// app.get('/products/:type')
 
 app.listen(3001)
