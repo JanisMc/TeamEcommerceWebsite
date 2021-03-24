@@ -22,7 +22,6 @@ const Category = (props) => {
                     <div className = "cards" key = {index}>
                     <p>{Product.name}</p>
                     <p>{Product.price}</p>
-                    <p>{Product.description}</p>
                     </div>        
                 )
             })}

@@ -1,9 +1,9 @@
 import './App.css';
-import Navbar from './components/navbar/Navbar'
-import Home from './components/Home'
+import Navbar from './components/navbar/NavbarComponent'
+import Home from './components/home/HomePage'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 // import MainProductPage from './components/MainProductPage';
-import Category from './components/category/Category'
+import Category from './components/category/CategoryPage'
 
 
 
