@@ -63,7 +63,7 @@ app.get('/product/all', async (req, res) => {
 })
 
 app.post('/product/create', (req, res) => {
-    const {name, type, quantity, price} = req.body
+    const {name, type, quantity, price, description} = req.body
 
     const product = new productModel({
         name,
@@ -99,7 +99,7 @@ app.delete('/product/delete/:id', (req, res) => {
 })
 
 app.put('/product/update/:id', async (req, res) => {
-    let {name, type, quantity, price} = req.body
+    let {name, type, quantity, price, description} = req.body
 
     if (!name) {name = undefined}
     if (!type) {type = undefined}

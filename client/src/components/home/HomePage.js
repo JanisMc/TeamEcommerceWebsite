@@ -1,6 +1,7 @@
 import React from 'react'
-import ProductCard from './main/productCard/ProductCard'
-import productInfo from './main/productInfo/productInfo'
+import ProductCard from '../main/productCard/ProductCardComponent'
+// import './Home.css';
+
 
 const Home = () => {
     return (
@@ -11,7 +12,10 @@ const Home = () => {
             <ProductCard imgProduct = "MobilesPreview" name = "Mobiles"/>
             <ProductCard imgProduct = "SmartWatchesPreview" name = "Smartwatches"/>
             <ProductCard imgProduct = "AccessoriesPreview" name = "Accesories"/>
-               
+            
+           
+            {/* <Footer/> */}
+      
         </div>
     );
 }
