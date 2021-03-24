@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductImage from '../productCard/ProductImage'
 
 const individualProductCard = (props) => {
     return (

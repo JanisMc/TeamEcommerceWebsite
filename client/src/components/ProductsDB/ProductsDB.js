@@ -9,14 +9,16 @@ const ProductsPage = () => {
         name: '',
         type: '',
         quantity: 10,
-        price: 0
+        price: 0,
+        description: ''
     })
 
     const [updateData, setUpdateData] = useState ({
         name: '',
         type: '',
         quantity: 10,
-        price: 0
+        price: 0,
+        description: ''
     })
 
     const getProducts = () => {
@@ -68,6 +70,7 @@ const ProductsPage = () => {
                 <p>Type: {product.type}</p>
                 <p>Quantity: {product.quantity}</p>
                 <p>Price: {product.price}</p>
+                <P>Description: {product.description}</P>
                 <button onClick = {() => {deleteProduct(product._id)}}>Delete</button>
                 <button onClick = {() => {setProductID(product._id)}}>Update</button>
                 <hr/>
@@ -127,6 +130,8 @@ const ProductsPage = () => {
           <br/>
           Price: <input type = 'number' name = 'price' value = {formData.price} onChange = {handleInputChange}/>
           <br/>
+          Description: <input type = 'text' name = 'description' value = {formData.description} onChange = {handleInputChange}/>
+          <br/>
           <input type = 'submit'/>
         </form>
 
@@ -140,6 +145,8 @@ const ProductsPage = () => {
           <br/>
           Price: <input type = 'number' name = 'price' value = {updateData.price} onChange = {handleUpdateChange}/>
           <br/>
+          Description: <input type = 'text' name = 'description' value = {updateData.description} onChange = {handleUpdateChange}/>
+          <br/>
           <input type = 'submit'/>
         </form>
 
@@ -150,4 +157,10 @@ const ProductsPage = () => {
 }
 
 
+
+
 export default ProductsPage
+
+//   const getHome = () => {
+//     fetch('http://localhost:3001/')
+//   }
