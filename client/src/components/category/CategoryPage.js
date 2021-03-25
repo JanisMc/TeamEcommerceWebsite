@@ -8,9 +8,9 @@ const Category = (props) => {
 
     const [viewProduct, setViewProduct] = useState(false) 
 
-    
-
         useEffect(() => {
+
+            console.log(props)
 
             const getProductByType = () => {
                 fetch(`http://localhost:3001/products/${props.type}`)
@@ -19,7 +19,7 @@ const Category = (props) => {
             }
             
             getProductByType()
-          }, [])
+          }, [props])
 
         return (
             <div className = "cardCointainer">
@@ -37,6 +37,5 @@ const Category = (props) => {
             </div>
         )
     }
-
 
 export default Category

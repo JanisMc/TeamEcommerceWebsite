@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 nav {
-  background-color: wheat;
+  background-color: rgb(170, 165, 157);
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
@@ -20,3 +20,7 @@ nav ul li {
 nav li a {
   text-decoration: none;
 }
+/* Nav-brand-logo {
+  max-width: 10%;
+  max-height: 5%;
+} */
