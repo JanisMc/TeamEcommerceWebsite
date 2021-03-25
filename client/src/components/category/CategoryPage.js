@@ -25,10 +25,10 @@ const Category = (props) => {
             <div className = "cardCointainer">
             {products.map((product,index) => {
                 return (
-                    <div className = "cardCategory" key = {index}>
-                    <Image img = {Product.img} class = "productImg"/>
-                    <p className ="name">{Product.name}</p>
-                    <p className = "text">£{Product.price}</p>
+                    <div onClick = {() => setViewProduct(product._id)} className = "cardCategory" key = {index}>
+                    <Image img = {product.img} class = "productImg"/>
+                    <p className ="name">{product.name}</p>
+                    <p className = "text">£{product.price}</p>
                     <button onClick = {() => setViewProduct(product._id)} className = "button">MORE INFO</button>
                     {viewProduct? <Redirect to={{pathname: "/product/individual", state: {productID: viewProduct}}}/>:null}
                     </div>        
