@@ -5,13 +5,13 @@ import ProductCard from '../main/productCard/ProductCardComponent'
 
 const Home = () => {
     return (
-        <div className="App">
+        <div className="cardCointainer">
             
-            <ProductCard imgProduct = "LaptopPreview" name = "Laptop"/>
-            <ProductCard imgProduct = "DesktopPreview" name = "Desktop"/>
+            <ProductCard imgProduct = "LaptopPreview" name = "Laptops"/>
+            <ProductCard imgProduct = "DesktopPreview" name = "Desktops"/>
             <ProductCard imgProduct = "MobilesPreview" name = "Mobiles"/>
-            <ProductCard imgProduct = "SmartWatchesPreview" name = "Smartwatches"/>
-            <ProductCard imgProduct = "AccessoriesPreview" name = "Accesories"/>
+            <ProductCard imgProduct = "SmartwatchesPreview" name = "Smartwatches"/>
+            <ProductCard imgProduct = "AccessoriesPreview" name = "Accessories"/>
             
            
             {/* <Footer/> */}
