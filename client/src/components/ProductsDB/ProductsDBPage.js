@@ -10,7 +10,8 @@ const ProductsPage = () => {
         type: '',
         quantity: 10,
         price: 0,
-        description: ''
+        description: '',
+        img: ''
     })
 
     const [updateData, setUpdateData] = useState ({
@@ -18,7 +19,8 @@ const ProductsPage = () => {
         type: '',
         quantity: 10,
         price: 0,
-        description: ''
+        description: '',
+        img: ''
     })
 
     const getProducts = () => {
@@ -70,7 +72,7 @@ const ProductsPage = () => {
                 <p>Type: {product.type}</p>
                 <p>Quantity: {product.quantity}</p>
                 <p>Price: {product.price}</p>
-                <P>Description: {product.description}</P>
+                <p>Description: {product.description}</p>
                 <button onClick = {() => {deleteProduct(product._id)}}>Delete</button>
                 <button onClick = {() => {setProductID(product._id)}}>Update</button>
                 <hr/>

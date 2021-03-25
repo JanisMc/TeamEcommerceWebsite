@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Image from '../img/Image'
 import { Redirect } from 'react-router'
 
 const Category = (props) => {
@@ -21,18 +22,19 @@ const Category = (props) => {
           }, [])
 
         return (
-            <>
+            <div className = "cardCointainer">
             {products.map((product,index) => {
                 return (
-                    <div className = "cards" key = {index}>
-                    <p>{product.name}</p>
-                    <p>{product.price}</p>
+                    <div className = "cardCategory" key = {index}>
+                    <Image img = {Product.img} class = "productImg"/>
+                    <p className ="name">{Product.name}</p>
+                    <p className = "text">£{Product.price}</p>
                     <button onClick = {() => setViewProduct(product._id)} className = "button">MORE INFO</button>
                     {viewProduct? <Redirect to={{pathname: "/product/individual", state: {productID: viewProduct}}}/>:null}
                     </div>        
                 )
             })}
-            </>
+            </div>
         )
     }
 
