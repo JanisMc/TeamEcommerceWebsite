@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Image from '../img/Image'
 
 const Items = (props) => {
 
@@ -20,6 +21,7 @@ const Items = (props) => {
       return (
         <>
                 <div className = "items">
+                <Image img = {product.img} class = "productImg"/>    
                 <p>{product.name}</p>
                 <p>{product.price}</p>
                 <p>{product.description}</p>
