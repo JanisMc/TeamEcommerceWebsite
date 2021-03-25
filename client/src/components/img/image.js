@@ -35,7 +35,8 @@ const images = {
    SW4,
    SW5,
    Logo,
-   FavIcon
+   FavIcon,
+//    Cart
 
 }
 
