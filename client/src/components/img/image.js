@@ -9,11 +9,11 @@ import Laptop2 from '../../images/Laptop2.png'
 import Laptop3 from '../../images/Laptop3.png'
 import Laptop4 from '../../images/Laptop4.png'
 import Laptop5 from '../../images/Laptop5.png'
-import Smartwatches1 from '../../images/SW1.jpg'
-import Smartwatches2 from '../../images/SW2.jpg'
-import Smartwatches3 from '../../images/SW3.jpg'
-import Smartwatches4 from '../../images/SW4.jpg'
-import Smartwatches5 from '../../images/SW5.jpg'
+import SW1 from '../../images/SW1.png'
+import SW2 from '../../images/SW2.png'
+import SW3 from '../../images/SW3.png'
+import SW4 from '../../images/SW4.png'
+import SW5 from '../../images/SW5.png'
 import Logo from '../../images/LogoSJJTech.png'
 import FavIcon from '../../images/FavIconSJJTech.png'
 
@@ -29,11 +29,11 @@ const images = {
    Laptop3,
    Laptop4,
    Laptop5,
-   Smartwatches1,
-   Smartwatches2,
-   Smartwatches3,
-   Smartwatches4,
-   Smartwatches5,
+   SW1,
+   SW2,
+   SW3,
+   SW4,
+   SW5,
    Logo,
    FavIcon
 

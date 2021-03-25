@@ -63,14 +63,15 @@ app.get('/product/all', async (req, res) => {
 })
 
 app.post('/product/create', (req, res) => {
-    const {name, type, quantity, price, description} = req.body
+    const {name, type, quantity, price, description, img} = req.body
 
     const product = new productModel({
         name,
         type,
         quantity,
         price,
-        description
+        description,
+        img
     })
 
     product.save()
@@ -99,20 +100,22 @@ app.delete('/product/delete/:id', (req, res) => {
 })
 
 app.put('/product/update/:id', async (req, res) => {
-    let {name, type, quantity, price, description} = req.body
+    let {name, type, quantity, price, description, img} = req.body
 
     if (!name) {name = undefined}
     if (!type) {type = undefined}
     if (!quantity) {quantity = undefined}
     if (!price) {price = undefined}
     if (!description) {description = undefined}
-
+    if (!img) {img = undefined}
+    
     let result = await productModel.updateOne({_id: req.params.id}, {
         name, 
         type, 
         quantity, 
         price,
-        description
+        description,
+        img
     }, {omitUndefined: true})
 
     res.send({

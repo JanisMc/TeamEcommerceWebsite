@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Image from '../img/Image'
 
 const Category = (props) => {
 
@@ -16,16 +17,18 @@ const Category = (props) => {
     }
 
         return (
-            <>
+            <div className = "cardCointainer">
             {Products.map((Product,index) => {
                 return (
-                    <div className = "cards" key = {index}>
-                    <p>{Product.name}</p>
-                    <p>{Product.price}</p>
+                    <div className = "cardCategory" key = {index}>
+                    <Image img = {Product.img} class = "productImg"/>
+                    <p className ="name">{Product.name}</p>
+                    <p className = "text">£{Product.price}</p>
+                    <button className = "button"> MORE INFO</button>
                     </div>        
                 )
             })}
-            </>
+            </div>
         )
     }
 
