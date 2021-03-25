@@ -1,27 +1,34 @@
 import {useState, useEffect} from 'react'
+import { Redirect } from 'react-router'
 
 const Category = (props) => {
 
-    const [Products, setProducts] = useState([])
-        
+    const [products, setProducts] = useState([])
+
+    const [viewProduct, setViewProduct] = useState(false) 
+
+    
+
         useEffect(() => {
-            console.log ("hello")
+
+            const getProductByType = () => {
+                fetch(`http://localhost:3001/products/${props.type}`)
+                .then(res => res.json())
+                .then(res => {console.log(res); setProducts(res.data)})
+            }
+            
             getProductByType()
           }, [])
 
-    const getProductByType = () => {
-        fetch(`http://localhost:3001/products/${props.type}`)
-        .then(res => res.json())
-        .then(res => {console.log(res); setProducts(res.data)})
-    }
-
         return (
             <>
-            {Products.map((Product,index) => {
+            {products.map((product,index) => {
                 return (
                     <div className = "cards" key = {index}>
-                    <p>{Product.name}</p>
-                    <p>{Product.price}</p>
+                    <p>{product.name}</p>
+                    <p>{product.price}</p>
+                    <button onClick = {() => setViewProduct(product._id)} className = "button">MORE INFO</button>
+                    {viewProduct? <Redirect to={{pathname: "/product/individual", state: {productID: viewProduct}}}/>:null}
                     </div>        
                 )
             })}

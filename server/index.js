@@ -121,6 +121,14 @@ app.put('/product/update/:id', async (req, res) => {
     })
 })
 
-// app.get('/products/:type')
+app.get('/product/individual/:id', async (req, res) => {
+    let product = await productModel.findOne({_id: req.params.id})
+
+    console.log(req.params.id)
+
+    res.send({
+        data: product
+    })
+})
 
 app.listen(3001)
