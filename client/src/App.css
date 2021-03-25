@@ -45,6 +45,12 @@
     text-shadow: 1px 1px grey;
 }
 
+.name2{
+    text-align: center;
+    font-size: large;
+    text-shadow: 0.5px 0.5px grey;
+    border-style: groove;
+}
 .button{
     background-color: rgb(198, 193, 215);
     padding: 0 25px;
@@ -54,7 +60,25 @@
     margin-bottom: 10px;
 }
 
-.productImg{
-    width: 100%;
+.button2{
+    background-color: rgb(198, 193, 215);
+    font-size: xx-large;
 }
 
+.productImg{
+    width: 70%;
+}
+
+.item{
+    width: 60%;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bannerImg{
+    margin-top: 15px;
+    max-height: auto;
+    width: 100%;
+    background-size: cover;
+}
