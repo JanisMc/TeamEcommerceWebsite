@@ -55,13 +55,13 @@
     text-shadow: 1px 1px grey;
 }
 
-/* .name1{
+.name1{
     display: none;
 }
 
-.cardCategory:hover + .name1{
+.cardCategory:hover .name1{
     display: block;
-} */
+}
 
 .name2{
     text-align: center;
@@ -134,8 +134,9 @@
 .footer{
     background: linear-gradient(
     to right bottom,
-    rgba(196, 182, 182, 0.7),
-    rgba(110, 105, 105, 0.3)
+    rgba(74, 168, 159, 0.9),
+    rgba(74, 168, 159, 0.6),
+    rgba(74, 168, 159, 0.3)
   );
     display: flex;
     justify-content: center;
@@ -205,4 +206,38 @@
     display: flex;
     justify-content:left;
     align-items: left;
+}
+
+@keyframes yourAnimation{
+    0%{
+        transform: rotate(0) translateX(-30px);
+        opacity: 0;
+        }
+    70%{
+        transform: rotate(0) translateX(15px);
+        opacity: 0.76;
+        }
+    100%{
+        transform: rotate(0) translateX(0px);
+        opacity: 1;
+        }
+}
+
+.title{
+    animation: yourAnimation 0.7s forwards 0.3s ease;
+}
+
+@keyframes yourAnimation2{
+    0%{
+        transform: rotate(0) scale(0.8) skewY(25deg);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) scale(1) skewY(0deg);
+        opacity: 1;
+        }
+}
+
+.discount{
+    animation: yourAnimation2 1s forwards 0s ease;
 }
