@@ -26,7 +26,7 @@ const Items = (props) => {
                 <p className = "text"> {product.name}</p>       
                 <p className = "name2"> {product.description}</p>
                 </div>
-                <div className = "item1.1">
+                <div className = "item11">
                 <p className = "name"> £{product.price}</p>
                 <button className = "button2"> ADD TO CART </button>
                 <image src = "/images/PayPal.png" alt = "PayPal"/>
