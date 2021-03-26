@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
 
+
 const Items = (props) => {
 
     const [product, setProduct] = useState([])
@@ -19,14 +20,18 @@ const Items = (props) => {
       }, [])
 
       return (
-        <>
-                <div className = "items">
+        <div className = "item">
+                <div className = "item1">
                 <Image img = {product.img} class = "productImg"/>    
-                <p>{product.name}</p>
-                <p>{product.price}</p>
-                <p>{product.description}</p>
+                <p className = "text"> {product.name}</p>       
+                <p className = "name2"> {product.description}</p>
+                </div>
+                <div className = "item1.1">
+                <p className = "name"> £{product.price}</p>
+                <button className = "button2"> ADD TO CART </button>
+                <image src = "/images/PayPal.png" alt = "PayPal"/>
                 </div>        
-        </>
+        </div>
     )
 }
 
