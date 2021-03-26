@@ -33,17 +33,32 @@ import './Navbar.css';
 
 const navbar = () => {
     return (
-        <nav>
-            <h1>SJJ</h1>
-            <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Contact</a></li>
-            <li>Cart: <span>0</span></li>
-            </ul>
+        <div class="dropdown">
+  <button class="dropbtn">Products</button>
+  <div class="dropdown-content">
+    <a href='/'>Home</a>
+    <a href='/product/desktop'>Contact</a>
+    <a href="#">Log in</a>
+  </div>
+</div>
+        // <nav>
+            
+        //     <h1>SJJ</h1>
+        //     <div className="dropdown">
+        //     <button className="dropdown">Products</button>
+        //         <div className="drop-down-content">
+        //         <li><a href="#">Home</a></li>
+        //     <li><a href="#">Products</a></li>
+        //     <li><a href="#">Log In</a></li>
+        //     <li><a href="#">Contact</a></li>
+        //         </div>
+        //         </div>
+                
+            
+        //     {/* <li>Cart: <span>0</span></li> */}
+        
            
-        </nav>
+        // </nav>
     )
 }
 
