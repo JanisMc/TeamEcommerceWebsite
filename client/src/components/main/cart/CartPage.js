@@ -4,7 +4,7 @@ import Image from '../../img/Image'
 const Cart = (props) => {
     return (
         <div className = "cart">
-            <div class = "productImg">
+            <div class = "productImg2">
             <Image img = 'Laptop1'/>
                 </div>
                 <div class = "divCart1">

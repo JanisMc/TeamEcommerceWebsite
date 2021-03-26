@@ -31,8 +31,6 @@ import Accessory4 from '../../images/Accessory4.png'
 import Accessory5 from '../../images/Accessory5.png'
 import Logo from '../../images/LogoSJJTech.png'
 import Banner from '../../images/Banner.png'
-import PayPal from '../../images/PayPal.png'
-import Visa from '../../images/Visa.svg'
 import Discount from '../../images/Discount.png'
 
 const images = {
@@ -68,8 +66,6 @@ const images = {
    Accessory5,
    Logo,
    Banner,
-   PayPal,
-   Visa,
    Discount
 
 }
