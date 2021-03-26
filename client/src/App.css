@@ -44,10 +44,28 @@
     text-shadow: 1px 1px grey;
 }
 
-.name, .name1{
+.name1{
     text-align: center;
     font-size: x-large;
     text-shadow: 1px 1px grey;
+}
+
+.name{
+    text-align: center;
+    font-size: xxx-large;
+    text-shadow: 1px 1px grey;
+}
+
+.item1{
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
+.item11{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
 }
 
 .name1{
@@ -62,7 +80,8 @@
     text-align: center;
     font-size: large;
     text-shadow: 0.5px 0.5px grey;
-    border-style: groove;
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
 }
 .button{
     -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
@@ -137,15 +156,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 .divFooter1, .divFooter2, .divFooter3, .divFooter4{
-    width: 25%;
+    width: 16.6%;
     flex: 1;
     text-shadow: 1px 1px whitesmoke;
 }
 
+.divFooter3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stripe, .paypal, .visa{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: relative;
+    right: 8%;
+}
+
+.divFooter2{
+    display: flex;
+    flex-direction: row;
+}
+
+.divFooter4{
+    position: relative;
+    left: 2%;
+}
 .product{
     width: 100%
 }
@@ -252,3 +294,4 @@
     text-shadow: 1px 1px white;
     border-radius: 5px;
 }
+
