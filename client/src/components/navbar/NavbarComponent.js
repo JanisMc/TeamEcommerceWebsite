@@ -37,7 +37,11 @@ const navbar = () => {
   <button class="dropbtn">Products</button>
   <div class="dropdown-content">
     <a href='/'>Home</a>
-    <a href='/product/desktop'>Contact</a>
+    <a href='/product/laptop'>Laptop</a>
+    <a href='/product/desktop'>Desktop</a>
+    <a href='/product/mobile'>Mobiles</a>
+    <a href='/product/smartWatch'>Smartwatches</a>
+    <a href='/product/accessories'>Accessories</a>
     <a href="#">Log in</a>
   </div>
 </div>
