@@ -18,22 +18,17 @@
 }
 
 .productCard, .cardCategory{
-
-    background: #f2f6f8;
-    background: -moz-linear-gradient(top,  #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 50%); 
-    background: -webkit-linear-gradient(top,  #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 30%);
-    background: linear-gradient(to bottom,  #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 60%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); 
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     width: 30%;
     display:flex;
     justify-content: center;
-    border-style: outset;
-    border-color: rgb(75, 73, 73);
     border-width: 5px;
     border-radius: 15px;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
+    margin: 20px;
  
 }
 
@@ -49,10 +44,28 @@
     text-shadow: 1px 1px grey;
 }
 
-.name, .name1{
+.name1{
     text-align: center;
     font-size: x-large;
     text-shadow: 1px 1px grey;
+}
+
+.name{
+    text-align: center;
+    font-size: xxx-large;
+    text-shadow: 1px 1px grey;
+}
+
+.item1{
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
+.item11{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
 }
 
 .name1{
@@ -67,10 +80,12 @@
     text-align: center;
     font-size: large;
     text-shadow: 0.5px 0.5px grey;
-    border-style: groove;
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
 }
 .button{
-    background-color: rgb(223, 222, 228);
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     padding: 0 25px;
     display: flex;
     height: 40px;
@@ -82,7 +97,8 @@
 
 
 .button2{
-    background-color: rgb(198, 193, 215);
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     font-size: xx-large;
 }
 
@@ -106,6 +122,8 @@
     max-height: auto;
     width: 100%;
     background-size: cover;
+    -webkit-box-shadow: 5px 7px 9px -2px rgba(0,0,0,0.43); 
+    box-shadow: 5px 7px 9px -2px rgba(0,0,0,0.43);
 }
 
 .title, .motto{
@@ -132,24 +150,44 @@
 }
 
 .footer{
-    background: linear-gradient(
-    to right bottom,
-    rgba(74, 168, 159, 0.9),
-    rgba(74, 168, 159, 0.6),
-    rgba(74, 168, 159, 0.3)
-  );
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
+    background: rgb(236, 226, 226);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 .divFooter1, .divFooter2, .divFooter3, .divFooter4{
-    width: 25%;
+    width: 16.6%;
     flex: 1;
     text-shadow: 1px 1px whitesmoke;
 }
 
+.divFooter3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stripe, .paypal, .visa{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: relative;
+    right: 8%;
+}
+
+.divFooter2{
+    display: flex;
+    flex-direction: row;
+}
+
+.divFooter4{
+    position: relative;
+    left: 2%;
+}
 .product{
     width: 100%
 }
@@ -159,7 +197,8 @@
 }
 
 .cart{
-    border-style: groove;
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     width: 45%;
     display: flex;
     justify-content: center;
@@ -183,8 +222,9 @@
 }
 
 .checkout{
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     flex: 1;
-    border-style: groove;
     width: 35%;
     height: 350px;
     display: flex;
@@ -241,3 +281,17 @@
 .discount{
     animation: yourAnimation2 1s forwards 0s ease;
 }
+
+.buyNowButton{
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
+    /* background-color: rgb(223, 222, 228); */
+    padding: 0 25px;
+    display: flex;
+    height: 40px;
+    font-size: xx-large;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px white;
+    border-radius: 5px;
+}
+
