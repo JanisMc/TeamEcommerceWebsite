@@ -25,7 +25,6 @@ const Cart = (props) => {
             </div>
             <div class= "info">
                 <h2>Total</h2>
-            <h2>V.A.T</h2>
             </div>
                 <div class= "amount">
             <h2>xxxx $</h2>

@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
+    margin: 20px;
  
 }
 
@@ -64,7 +65,8 @@
     border-style: groove;
 }
 .button{
-    background-color: rgb(223, 222, 228);
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     padding: 0 25px;
     display: flex;
     height: 40px;
@@ -76,7 +78,8 @@
 
 
 .button2{
-    background-color: rgb(198, 193, 215);
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     font-size: xx-large;
 }
 
@@ -152,7 +155,8 @@
 }
 
 .cart{
-    border-style: groove;
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     width: 45%;
     display: flex;
     justify-content: center;
@@ -176,8 +180,9 @@
 }
 
 .checkout{
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
     flex: 1;
-    border-style: groove;
     width: 35%;
     height: 350px;
     display: flex;
@@ -233,4 +238,17 @@
 
 .discount{
     animation: yourAnimation2 1s forwards 0s ease;
+}
+
+.buyNowButton{
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51); 
+    box-shadow: 5px 5px 9px 3px rgba(0,0,0,0.51);
+    /* background-color: rgb(223, 222, 228); */
+    padding: 0 25px;
+    display: flex;
+    height: 40px;
+    font-size: xx-large;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px white;
+    border-radius: 5px;
 }
