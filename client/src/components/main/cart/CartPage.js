@@ -5,10 +5,11 @@ const Cart = (props) => {
     return (
         <div className = "cartContainer">
         <div className = "cart">
+
             <div class = "productImg2">
             <Image img = 'Laptop1' class = "product"/>
                 </div>
-                <div class = "divCart1">
+            <div class = "divCart1">
                 <h2>Name</h2>
                 <h2>Model</h2>
                     </div>
