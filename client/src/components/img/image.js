@@ -33,7 +33,7 @@ import Logo from '../../images/LogoSJJTech.png'
 import Banner from '../../images/Banner.png'
 import PayPal from '../../images/PayPal.png'
 import Visa from '../../images/Visa.svg'
-
+import Discount from '../../images/Discount.png'
 
 const images = {
    LaptopPreview,
@@ -69,7 +69,8 @@ const images = {
    Logo,
    Banner,
    PayPal,
-   Visa
+   Visa,
+   Discount
 
 }
 

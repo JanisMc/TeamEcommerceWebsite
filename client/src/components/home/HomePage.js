@@ -1,10 +1,11 @@
 import React from 'react'
 import ProductCard from '../main/productCard/ProductCardComponent'
-import {useState, useEffect} from 'react'
-import Image from '../img/Image'
-import { Redirect } from 'react-router'
-import {Link} from 'react-router-dom'
+// import {useState, useEffect} from 'react'
+// import Image from '../img/Image'
+// import { Redirect } from 'react-router'
+// import {Link} from 'react-router-dom'
 import Banner from '../main/banner/Banner'
+import Footer from '../main/footer/Footer'
 
 
 const Home = (props) => {
@@ -21,6 +22,10 @@ const Home = (props) => {
                 <ProductCard type = "smartwatch" imgProduct = "SmartwatchesPreview" name = "Smartwatches"/>
                 <ProductCard type = "accessiories" imgProduct = "AccessoriesPreview" name = "Accessories"/>       
         </div>
+        <div>
+            <Footer/>
+        </div>
+        </>
     )
 }
 
