@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 nav {
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* float: right; */
   background-color: rgb(211, 237, 245);
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   position: fixed;
@@ -34,7 +38,7 @@ nav li a {
   float: right;
   background-color: rgb(211, 237, 245);
   color: rgb(0, 0, 0);
-  padding: 16px;
+  padding: 16px 16px;
   font-size: 30px;
   border: none;
   cursor: pointer;
@@ -70,6 +74,15 @@ nav li a {
   display: block;
 }
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropdown {
+/* .dropdown:hover .dropdown {
   background-color: #3e8e41;
+} */
+.logoLeft {
+  float: left;
+  margin: 20px 30px;
+  font-size: 30px;
+}
+.basket {
+  float: left;
+  font-size: 30px;
 }
