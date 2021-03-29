@@ -62,6 +62,6 @@ import Image from '../../img/Image'
 
 
 
-    )}
+    )
 
 export default Cart

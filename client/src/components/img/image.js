@@ -31,7 +31,11 @@ import Accessory4 from '../../images/Accessory4.png'
 import Accessory5 from '../../images/Accessory5.png'
 import Logo from '../../images/LogoSJJTech.png'
 import Banner from '../../images/Banner.png'
-import Discount from '../../images/Discount.png'
+import Discount from '../../images/Discount.gif'
+import Stripe from '../../images/Stripe.svg'
+import Visa from '../../images/Visa.svg'
+import PayPal from '../../images/PayPal.svg'
+import CreativeCommons from '../../images/CreativeCommons.png'
 
 const images = {
    LaptopPreview,
@@ -66,7 +70,11 @@ const images = {
    Accessory5,
    Logo,
    Banner,
-   Discount
+   Discount,
+   Visa,
+   PayPal,
+   Stripe,
+   CreativeCommons
 
 }
 
