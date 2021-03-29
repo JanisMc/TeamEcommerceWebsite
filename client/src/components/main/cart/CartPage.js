@@ -1,7 +1,32 @@
 import React from 'react'
 import Image from '../../img/Image'
 
-const Cart = (props) => {
+    const Cart = (props) => {
+
+        // const [basketTotal, setBasketTotal] = useState (0)
+
+        // const [runningCost, setRunningCost] = useState(0)
+
+    
+
+//     const addToBasket = () => {
+
+//         let basket = {
+//         id1: {name: 'Acer whatever',
+//         price: 5000,
+//         quantity: 9
+//     },
+//         id2: {name: 'Acer whatever',
+//         price: 5000,
+//         quantity: 9
+//     }
+//         }
+
+//         this.setState ({
+//             basket: this.state.basket +1
+//         })
+//     }
+
     return (
         <div className = "cartContainer">
         <div className = "cart">
@@ -26,13 +51,12 @@ const Cart = (props) => {
             </div>
             <div class= "info">
                 <h2>Total</h2>
-            <h2>V.A.T</h2>
             </div>
                 <div class= "amount">
             <h2>xxxx $</h2>
             </div>
                 <div class= "buyNow"></div>
-                <button class = "buyNowButton"> BUY NOW</button>
+                <button class = "buyNowButton">BUY NOW</button>
         </div>
         </div>
 
