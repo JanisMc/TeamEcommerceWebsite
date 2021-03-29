@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../../img/Image'
+import Items from '../../individual/IndividualPage'
 
     const Cart = (props) => {
 
@@ -35,14 +36,16 @@ import Image from '../../img/Image'
             <Image img = 'Laptop1' class = "product"/>
                 </div>
             <div class = "divCart1">
-                <h2>Name</h2>
-                <h2>Model</h2>
+                <h2>Item</h2>
+                <p>{Items.item}</p>
                     </div>
                     <div class = "divCart2">
                     <h2>Quantity</h2>
+                    <p>{Items.quantity}</p>
                         </div>
                         <div class = "divCart2">
-                        <h2>Price</h2>  
+                        <h2>Price</h2> 
+                        <p>{Items.price}</p> 
                         </div>
                         </div>
         <div className = "checkout">
@@ -63,5 +66,5 @@ import Image from '../../img/Image'
 
 
     )
-
+    }
 export default Cart
