@@ -33,7 +33,8 @@ import './Navbar.css';
 
 const navbar = () => {
     return (
-        <div class="dropdown">
+        <nav>
+                  <div class="dropdown">
   <button class="dropbtn">Products</button>
   <div class="dropdown-content">
     <a href='/'>Home</a>
@@ -45,6 +46,8 @@ const navbar = () => {
     <a href="#">Log in</a>
   </div>
 </div>
+            </nav>
+  
         // <nav>
             
         //     <h1>SJJ</h1>

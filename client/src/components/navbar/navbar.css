@@ -1,14 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 nav {
-  background-color: rgb(170, 165, 157);
+  float: right;
+  background-color: rgb(201, 196, 167);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  /* transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out; */
+  height: 77px;
+
+  /* background-color: rgb(170, 165, 157);
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 40px; */
 }
 
 nav ul {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
 }
 
@@ -26,7 +37,8 @@ nav li a {
 } */
 
 .dropbtn {
-  background-color: #c9c4a7;
+  float: right;
+  background-color: rgb(201, 196, 167);
   color: rgb(0, 0, 0);
   padding: 16px;
   font-size: 30px;
