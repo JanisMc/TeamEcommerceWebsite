@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 nav {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   /* float: right; */
+
+  float: right;
+
   background-color: rgb(211, 237, 245);
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   position: fixed;
@@ -14,6 +18,7 @@ nav {
   /* transition: height 0.2s ease-in-out;
   transition: height 0.2s ease-in-out; */
   height: 77px;
+
   /* background-color: rgb(170, 165, 157);
   display: flex;
   justify-content: space-between;

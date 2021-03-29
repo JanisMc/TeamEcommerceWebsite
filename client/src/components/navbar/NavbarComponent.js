@@ -20,15 +20,11 @@
 import React from 'react' ;
 import './Navbar.css';
 const navbar = () => {
-    return (
-      
+    return 
         <nav>
-         
             <div className="logoLeft">SJJ Tech</div>
             <div className="basket">Basket</div>
-            
                   <div class="dropdown">
-                  
   <button class="dropbtn">Products</button>
   <div class="dropdown-content">
     <a href='/'>Home</a>
@@ -41,6 +37,7 @@ const navbar = () => {
   </div>
 </div>
             </nav>
+
         // <nav>
         //     <h1>SJJ</h1>
         //     <div className="dropdown">
