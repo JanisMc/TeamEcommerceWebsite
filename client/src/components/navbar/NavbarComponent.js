@@ -34,6 +34,7 @@ import './Navbar.css';
 const navbar = () => {
     return (
         <nav>
+            {/* <h1>SJJ</h1>  */}
                   <div class="dropdown">
   <button class="dropbtn">Products</button>
   <div class="dropdown-content">
