@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
-
+import {Link} from 'react-router-dom'
 
 const Items = (props) => {
 
@@ -19,6 +19,7 @@ const Items = (props) => {
         getIndividualProduct()
       }, [])
 
+
       return (
         <div className = "item">
                 <div className = "item1">
@@ -26,9 +27,9 @@ const Items = (props) => {
                 <p className = "text"> {product.name}</p>       
                 <p className = "name2"> {product.description}</p>
                 </div>
-                <div className = "item11">
-                <p className = "name"> £{product.price}</p>
-                <button className = "button2"> ADD TO CART </button>
+                <div className = "item1.1">
+                <p className = "name">£{product.price}</p>
+                <button className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
                 <image src = "/images/PayPal.png" alt = "PayPal"/>
                 </div>        
         </div>
