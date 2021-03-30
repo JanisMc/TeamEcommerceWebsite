@@ -8,8 +8,7 @@ import Image from '../../img/Image'
 
     return (
         <div className = "cartContainer">
-        {Object.entries(basket).map(([key, value]) => {console.log(value)
-            return (
+        {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
 
@@ -30,7 +29,7 @@ import Image from '../../img/Image'
             </div>
         </div>
    
-        )})}
+        ))}
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>
