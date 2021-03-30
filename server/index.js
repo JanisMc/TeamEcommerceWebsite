@@ -5,7 +5,7 @@ const bodyParser = require ('body-parser')
 // const MongoStore = require ('connect-mongo')
 const cors = require ('cors')
 
-const mainRouter = require('./routes/mainRouter')
+// const mainRouter = require('./routes/mainRouter')
 const productModel = require('./models/productModel')
 
 const app = express()
@@ -31,7 +31,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use('/', mainRouter)
+// app.use('/', mainRouter)
 
 app.get('/products/:type', async (req, res) => {
     let data = await productModel.find({type:req.params.type})
@@ -75,7 +75,7 @@ app.post('/product/create', (req, res) => {
     })
 
     product.save()
-    console.log(product)
+    // console.log(product)
 
     res.send({
         success: true,
@@ -127,7 +127,7 @@ app.put('/product/update/:id', async (req, res) => {
 app.get('/product/individual/:id', async (req, res) => {
     let product = await productModel.findOne({_id: req.params.id})
 
-    console.log(req.params.id)
+    // console.log(req.params.id)
 
     res.send({
         data: product

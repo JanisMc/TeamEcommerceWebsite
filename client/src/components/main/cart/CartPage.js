@@ -1,41 +1,50 @@
 import React from 'react'
 import Image from '../../img/Image'
 
-const Cart = (props) => {
+    const Cart = () => {
+
+        let basket = localStorage.getItem('basket')
+        basket = JSON.parse(basket)
+
     return (
         <div className = "cartContainer">
-        <div className = "cart">
-            <div class = "productImg2">
-            <Image img = 'Laptop1' class = "product"/>
-                </div>
-                <div class = "divCart1">
+        {Object.entries(basket).map(([key, value]) => (
+        
+        <div className="cart">
+
+            <div className="productImg2">
+                <Image img= {value.img} class="product" />
+            </div>
+            <div className="divCart1">
                 <h2>Name</h2>
-                <h2>Model</h2>
-                    </div>
-                    <div class = "divCart2">
-                    <h2>Quantity</h2>
-                        </div>
-                        <div class = "divCart2">
-                        <h2>Price</h2>  
-                        </div>
-                        </div>
-        <div className = "checkout">
-            <div class= "checkout1">
+                <h2>{value.name}</h2>
+            </div>
+            <div className="divCart2">
+                <h2>Quantity</h2>
+                <p>{value.quantity}</p>
+            </div>
+            <div className="divCart2">
+                <h2>Price</h2>
+                <p>{value.price}</p>
+            </div>
+        </div>
+   
+        ))}
+        <div className="checkout">
+            <div className="checkout1">
                 <h2>CHECKOUT</h2>
             </div>
-            <div class= "info">
+            <div className="info">
                 <h2>Total</h2>
             </div>
-                <div class= "amount">
-            <h2>xxxx $</h2>
+            <div className="amount">
+                <h2>xxxx $</h2>
             </div>
-                <div class= "buyNow"></div>
-                <button class = "buyNowButton"> BUY NOW</button>
+            <div className="buyNow">
+            </div>
+                <button className="buyNowButton">BUY NOW</button>
+            </div>
         </div>
-        </div>
-
-
-
-    )}
-
+    )
+    }
 export default Cart
