@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
 import {Link} from 'react-router-dom'
-import Cart from '../main/cart/CartPage'
 
 const Items = (props) => {
 
@@ -18,58 +17,39 @@ const Items = (props) => {
         getIndividualProduct()
       }, [])
 
-      const addToCart = (props) => {
-          let basket
-          let quantity = 0
-          if (Cart) {
-            basket = Cart
-                if (product) {
-                    quantity ++
-                } 
-          } else {
+      const addToCart = () => {
+          let basket = localStorage.getItem('basket')
+            //retrieve local storage
+          if (basket) {
+                // if a basket exists increase the quantity of the product in the basket
+            basket = JSON.parse(basket)
+                // split object to access key/values inside
+                // find out if the product already exists in the basket - 
+                if (basket.hasOwnProperty(product._id)) {          
+                basket[product._id].quantity ++
+                //if it doesn't exist, create a new instance in the basket
+                } else {
+                    basket[product._id] = {
+                    image: product.img,
+                    name: product.name, 
+                    quantity: 1, 
+                    price: product.price
+                }
+            }
+            // if no basket exists, create a new instance of basket
+            } else {
             basket = {
-                  id: {
-                      item: props.name, 
-                      quantity, 
-                      price: props.price}
+                  [product._id]: {
+                    image: product.img,
+                    name: product.name, 
+                    quantity: 1, 
+                    price: product.price}
                   }
         
-                  localStorage.setItem('basket', JSON.stringify(basket))
-        
-                  let updatedBasket = localStorage.getItem('basket')
-                  console.log('basket', JSON.parse(updatedBasket))
           }
-          //if cart exists 
-            //basket = cart from local
-            //check if product exists in basket - 
-                //increase bask quant
-            //else add new to cart
-          //else - create basket with added product
-          //save to local
-        //   let basket = {
-        //   id: {
-        //       item: props.name, 
-        //       quantity: 0, 
-        //       price: props.price}
-        //   }
 
-        //   localStorage.setItem('basket', JSON.stringify(basket))
-
-        //   let updatedBasket = localStorage.getItem('basket')
-        //   console.log('basket', JSON.parse(updatedBasket))
-      }
-
-      //store bsak local retri from locl - add product
-
-    //     var testObject = { 'one': 1, 'two': 2, 'three': 3 };
-
-    // // Put the object into storage
-    // localStorage.setItem('testObject', JSON.stringify(testObject));
-
-    // // Retrieve the object from storage
-    // var retrievedObject = localStorage.getItem('testObject');
-
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+          localStorage.setItem('basket', JSON.stringify(basket))
+        }
 
       return (
         <div className = "item">
@@ -80,7 +60,7 @@ const Items = (props) => {
                 </div>
                 <div className = "item1.1">
                 <p className = "name">£{product.price}</p>
-                <button onClick = {() => addToCart(product)} className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
+                <button onClick = {addToCart} className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
                 <image src = "/images/PayPal.png" alt = "PayPal"/>
                 </div>        
         </div>
