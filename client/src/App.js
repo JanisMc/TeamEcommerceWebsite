@@ -10,8 +10,10 @@ import Cart from './components/main/cart/CartPage'
 
 const App = () => {
     return (
+        <>
+        <Navbar/>
         <BrowserRouter>
-            <Navbar/>
+           
             <Switch>
                 <Route exact path = "/" component = {Home}/>
                 <Route exact path = "/cart" component = {Cart}/>
@@ -23,6 +25,7 @@ const App = () => {
                 <Route path = "/product/individual" render = {(props) => <Individual id = {props.location.state.productID}/>}/>
             </Switch>
         </BrowserRouter>
+        </>
     )
 } 
 export default App;
