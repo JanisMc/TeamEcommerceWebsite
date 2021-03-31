@@ -30,6 +30,7 @@ const Items = (props) => {
                 //if it doesn't exist, create a new instance in the basket
                 } else {
                     basket[product._id] = {
+                    _id: product._id,
                     image: product.img,
                     name: product.name, 
                     quantity: 1, 
@@ -40,6 +41,7 @@ const Items = (props) => {
             } else {
             basket = {
                   [product._id]: {
+                    _id: product._id,
                     image: product.img,
                     name: product.name, 
                     quantity: 1, 
@@ -55,10 +57,10 @@ const Items = (props) => {
         <div className = "item">
                 <div className = "item1">
                 <Image img = {product.img} class = "productImg"/>    
-                <p className = "text"> {product.name}</p>       
+                <p className = "indText"> {product.name}</p>       
                 <p className = "name2"> {product.description}</p>
                 </div>
-                <div className = "item1.1">
+                <div className = "item11">
                 <p className = "name">£{product.price}</p>
                 <button onClick = {addToCart} className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
                 <image src = "/images/PayPal.png" alt = "PayPal"/>
