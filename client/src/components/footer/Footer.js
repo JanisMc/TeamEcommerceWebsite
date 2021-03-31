@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from '../../img/Image'
-import './Footer.css'
+import Image from '../img/Image'
 
 
 const Footer = (props) => {
