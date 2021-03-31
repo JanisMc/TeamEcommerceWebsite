@@ -6,6 +6,7 @@ import ProductCard from '../productCard/ProductCardComponent'
 // import {Link} from 'react-router-dom'
 import Banner from '../banner/Banner'
 import Footer from '../footer/Footer'
+import '../category/CategoryPage.css'
 
 
 const Home = (props) => {
