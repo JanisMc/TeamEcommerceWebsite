@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from '../../img/Image'
-import './Banner.css'
+import Image from '../img/Image'
 
 
 const Banner = (props) => {
