@@ -20,7 +20,7 @@ const Home = (props) => {
                 <ProductCard type = "desktop" imgProduct = "DesktopPreview" name = "Desktops"/>
                 <ProductCard type = "mobile" imgProduct = "MobilesPreview" name = "Mobiles"/>
                 <ProductCard type = "smartwatch" imgProduct = "SmartwatchesPreview" name = "Smartwatches"/>
-                <ProductCard type = "accessiories" imgProduct = "AccessoriesPreview" name = "Accessories"/>       
+                <ProductCard type = "accessories" imgProduct = "AccessoriesPreview" name = "Accessories"/>       
         </div>
         <div>
             <Footer/>

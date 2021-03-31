@@ -10,8 +10,6 @@ const Category = (props) => {
 
         useEffect(() => {
 
-            console.log(props)
-
             const getProductByType = () => {
                 fetch(`http://localhost:3001/products/${props.type}`)
                 .then(res => res.json())

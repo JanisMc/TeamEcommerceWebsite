@@ -214,8 +214,16 @@
   flex: 1;
 }
 
-.divCart1,
-.divCart2,
+.divCart1 {
+  width: 25%;
+  flex: 1;
+  text-shadow: 1px 1px whitesmoke;
+}
+.divCart2 {
+  width: 25%;
+  flex: 1;
+  text-shadow: 1px 1px whitesmoke;
+}
 .divCart3 {
   width: 25%;
   flex: 1;
