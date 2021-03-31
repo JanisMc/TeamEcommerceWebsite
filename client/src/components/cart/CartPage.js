@@ -1,6 +1,7 @@
 import React from 'react'
-import Image from '../../img/Image'
+import Image from '../img/Image'
 import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
     const Cart = () => {
 
@@ -35,7 +36,7 @@ import {useState, useEffect} from 'react'
         <div className="cart">
             
             <div className="productImg2">
-                <Image img= {value.img} class="product" />
+                <Image img= {value.image} class="product" />
             </div>
             <div className="divCart1">
                 <h2>Name:</h2>
@@ -67,7 +68,7 @@ import {useState, useEffect} from 'react'
             </div>
             <div className="buyNow">
             </div>
-                <button className="buyNowButton">BUY NOW</button>
+                <button className="buyNowButton"><Link to = {'/checkout'}>BUY NOW</Link></button>
             </div>
         </div>
     )
