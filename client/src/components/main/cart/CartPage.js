@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../../img/Image'
+import './CartPage.css'
 
     const Cart = () => {
 
@@ -8,12 +9,13 @@ import Image from '../../img/Image'
 
     return (
         <div className = "cartContainer">
+            <div class = "productContainer">
         {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
 
             <div className="productImg2">
-                <Image img= {value.img} class="product" />
+                <Image img= {value.image} class="product" />
             </div>
             <div className="divCart1">
                 <h2>Name</h2>
@@ -30,6 +32,7 @@ import Image from '../../img/Image'
         </div>
    
         ))}
+        </div>
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>

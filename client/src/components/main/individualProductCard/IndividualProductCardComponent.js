@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductImage from '../productCard/ProductImage'
+import './individualProductCard.css'
 
 const individualProductCard = (props) => {
     return (

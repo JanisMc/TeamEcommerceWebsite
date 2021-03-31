@@ -1,0 +1,46 @@
+.item1 {
+    position: relative;
+    left: 10%;
+    padding: 100px;
+}
+  
+.item11 {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+}
+  
+.name1 {
+    display: none;
+}
+
+.name2 {
+    text-align: center;
+    font-size: large;
+    text-shadow: 0.5px 0.5px grey;
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
+    box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
+}
+
+.button2 {
+    -webkit-box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
+    box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
+    font-size: xx-large;
+    top: 45%;
+    position: absolute;
+}
+
+.item {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.name {
+    text-align: center;
+    font-size: xxx-large;
+    text-shadow: 1px 1px grey;
+    position: absolute;
+    top: 30%;
+}
