@@ -2,6 +2,7 @@ import React from 'react'
 import Image from '../img/Image'
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import './CartPage.css'
 
     const Cart = () => {
 

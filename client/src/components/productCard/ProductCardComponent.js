@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductImage from './ProductImageComponent'
 import {Link} from 'react-router-dom'
+import './ProductCardComponent.css'
 
 const ProductCard = (props) => {
     return (
