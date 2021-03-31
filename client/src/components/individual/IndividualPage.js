@@ -31,6 +31,7 @@ const Items = (props) => {
                 //if it doesn't exist, create a new instance in the basket
                 } else {
                     basket[product._id] = {
+                    _id: product._id,
                     image: product.img,
                     name: product.name, 
                     quantity: 1, 
@@ -41,6 +42,7 @@ const Items = (props) => {
             } else {
             basket = {
                   [product._id]: {
+                    _id: product._id,
                     image: product.img,
                     name: product.name, 
                     quantity: 1, 
@@ -59,14 +61,12 @@ const Items = (props) => {
                 <p className = "text"> {product.name}</p>       
                 <p className = "name2"> {product.description}</p>
                 </div>
-                <div className = "item1.1">
+                <div className = "item11">
                 <p className = "name">£{product.price}</p>
                 <button onClick = {addToCart} className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
                 </div>        
         </div>
     )
 }
-
-//
 
 export default Items
