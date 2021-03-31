@@ -4,8 +4,8 @@ import Home from './components/home/HomePage'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Category from './components/category/CategoryPage'
 import Individual from './components/individual/IndividualPage'
-import Cart from './components/main/cart/CartPage'
-
+import Cart from './components/cart/CartPage'
+import Checkout from './components/checkout/Checkout'
 
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
             <Switch>
                 <Route exact path = "/" component = {Home}/>
                 <Route exact path = "/cart" component = {Cart}/>
+                <Route exact path = "/checkout" component = {Checkout}/>
                 <Route exact path = "/product/laptop"  render={() =><Category type='laptop'/>}/>
                 <Route exact path = "/product/desktop"  render={() =><Category type='desktop'/>}/>
                 <Route exact path = "/product/mobile"  render={() =><Category type='mobile'/>}/>

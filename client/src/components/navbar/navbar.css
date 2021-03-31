@@ -15,17 +15,10 @@ nav {
   top: 0;
   width: 100%;
   z-index: 2;
-  /* transition: height 0.2s ease-in-out;
-  transition: height 0.2s ease-in-out; */
   height: 77px;
 
-  /* background-color: rgb(170, 165, 157);
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px; */
 }
 nav ul {
-  /* display: flex; */
   justify-content: space-around;
 }
 nav ul li {
@@ -35,10 +28,7 @@ nav ul li {
 nav li a {
   text-decoration: none;
 }
-/* Nav-brand-logo {
-  max-width: 10%;
-  max-height: 5%;
-} */
+
 .dropbtn {
   float: right;
   background-color: rgb(211, 237, 245);
@@ -78,16 +68,12 @@ nav li a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropdown {
-  background-color: #3e8e41;
-} */
+
 .logoLeft {
-  float: left;
-  margin: 20px 30px;
+  
   font-size: 30px;
 }
 .basket {
-  float: left;
+  
   font-size: 30px;
 }

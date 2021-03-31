@@ -1,7 +1,8 @@
 import React from 'react'
-import Image from '../../img/Image'
-import './CartPage.css'
+import Image from '../img/Image'
 import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
+import './CartPage.css'
 
     const Cart = () => {
 
@@ -31,7 +32,6 @@ import {useState, useEffect} from 'react'
 
     return (
         <div className = "cartContainer">
-            <div class = "productContainer">
         {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
@@ -57,7 +57,6 @@ import {useState, useEffect} from 'react'
         </div>
    
         ))}
-        </div>
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>
@@ -70,7 +69,7 @@ import {useState, useEffect} from 'react'
             </div>
             <div className="buyNow">
             </div>
-                <button className="buyNowButton">BUY NOW</button>
+                <button className="buyNowButton"><Link to = {'/checkout'}>BUY NOW</Link></button>
             </div>
         </div>
     )
