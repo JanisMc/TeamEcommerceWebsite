@@ -5,9 +5,10 @@
 }
   
 .item11 {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
   
 .name1 {
@@ -26,8 +27,7 @@
     -webkit-box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
     box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.51);
     font-size: xx-large;
-    top: 45%;
-    position: absolute;
+    top: 55%;
 }
 
 .item {
