@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../../img/Image'
+import './CartPage.css'
 import {useState, useEffect} from 'react'
 
     const Cart = () => {
@@ -30,12 +31,13 @@ import {useState, useEffect} from 'react'
 
     return (
         <div className = "cartContainer">
+            <div class = "productContainer">
         {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
             
             <div className="productImg2">
-                <Image img= {value.img} class="product" />
+                <Image img= {value.image} class="product" />
             </div>
             <div className="divCart1">
                 <h2>Name:</h2>
@@ -55,6 +57,7 @@ import {useState, useEffect} from 'react'
         </div>
    
         ))}
+        </div>
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>

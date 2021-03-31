@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
 import { Redirect } from 'react-router'
+import './CategoryPage.css'
 
 const Category = (props) => {
 

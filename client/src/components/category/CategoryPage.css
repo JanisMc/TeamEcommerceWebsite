@@ -1,0 +1,18 @@
+.cardCointainer {
+    margin-top: 85px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cardCategory:hover .name1 {
+    display: block;
+}
+  
+.name1 {
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 1px 1px grey;
+}

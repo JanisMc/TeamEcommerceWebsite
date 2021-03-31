@@ -1,8 +1,7 @@
 import React from 'react' ;
 import './Navbar.css';
-
 const Navbar = () => {
-    return (
+    return ( 
         <nav>
             <div className="logoLeft">SJJ Tech</div>
             <div className="basket">Basket</div>
