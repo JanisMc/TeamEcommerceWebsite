@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
 import { Redirect } from 'react-router'
+import './CategoryPage.css'
 
 const Category = (props) => {
 
@@ -9,8 +10,6 @@ const Category = (props) => {
     const [viewProduct, setViewProduct] = useState(false) 
 
         useEffect(() => {
-
-            console.log(props)
 
             const getProductByType = () => {
                 fetch(`http://localhost:3001/products/${props.type}`)

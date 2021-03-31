@@ -1,12 +1,11 @@
 import {useState, useEffect} from 'react'
 import Image from '../img/Image'
-
+import {Link} from 'react-router-dom'
+import './IndividualPage.css'
 
 const Items = (props) => {
 
     const [product, setProduct] = useState([])
-
-    
 
     useEffect(() => {
 
@@ -19,21 +18,55 @@ const Items = (props) => {
         getIndividualProduct()
       }, [])
 
+      const addToCart = () => {
+          let basket = localStorage.getItem('basket')
+            //retrieve local storage
+          if (basket) {
+                // if a basket exists increase the quantity of the product in the basket
+            basket = JSON.parse(basket)
+                // split object to access key/values inside
+                // find out if the product already exists in the basket - 
+                if (basket.hasOwnProperty(product._id)) {          
+                basket[product._id].quantity ++
+                //if it doesn't exist, create a new instance in the basket
+                } else {
+                    basket[product._id] = {
+                    _id: product._id,
+                    image: product.img,
+                    name: product.name, 
+                    quantity: 1, 
+                    price: product.price
+                }
+            }
+            // if no basket exists, create a new instance of basket
+            } else {
+            basket = {
+                  [product._id]: {
+                    _id: product._id,
+                    image: product.img,
+                    name: product.name, 
+                    quantity: 1, 
+                    price: product.price}
+                  }
+        
+          }
+
+          localStorage.setItem('basket', JSON.stringify(basket))
+        }
+
       return (
         <div className = "item">
                 <div className = "item1">
-                <Image img = {product.img} class = "productImg"/>    
+                <Image img = {product.img} class = "productImgIndividual"/>    
                 <p className = "text"> {product.name}</p>       
                 <p className = "name2"> {product.description}</p>
                 </div>
                 <div className = "item11">
-                <p className = "name"> £{product.price}</p>
-                <button className = "button2"> ADD TO CART </button>
-                <image src = "/images/PayPal.png" alt = "PayPal"/>
+                <p className = "name">£{product.price}</p>
+                <button onClick = {addToCart} className = "button2"><Link to = {'/cart'}>ADD TO CART</Link></button>
                 </div>        
         </div>
     )
 }
-
 
 export default Items

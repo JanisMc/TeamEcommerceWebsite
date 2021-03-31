@@ -1,11 +1,11 @@
-const {Router} = require ('express')
-const router = Router()
+// const {Router} = require ('express')
+// const router = Router()
 
-const controller = require ('../controllers/mainController')
+// const controller = require ('../controllers/mainController')
 
-router.get('/', controller.getIndex)
+// router.get('/', controller.getIndex)
 
-module.exports = router
+// module.exports = router
 
 
 // const { Router } = require("express");
