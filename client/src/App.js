@@ -12,8 +12,8 @@ import LogIn from './components/logIn/LogIn'
 const App = () => {
     return (
         <>
-        <Navbar/>
         <BrowserRouter>
+        <Navbar/>
            
             <Switch>
                 <Route exact path = "/" component = {Home}/>
