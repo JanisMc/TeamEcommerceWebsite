@@ -6,6 +6,7 @@ import Category from './components/category/CategoryPage'
 import Individual from './components/individual/IndividualPage'
 import Cart from './components/cart/CartPage'
 import Checkout from './components/checkout/Checkout'
+import LogIn from './components/logIn/LogIn'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
                 <Route exact path = "/" component = {Home}/>
                 <Route exact path = "/cart" component = {Cart}/>
                 <Route exact path = "/checkout" component = {Checkout}/>
+                <Route exact path = "/login" component = {LogIn}/>
                 <Route exact path = "/product/laptop"  render={() =><Category type='laptop'/>}/>
                 <Route exact path = "/product/desktop"  render={() =><Category type='desktop'/>}/>
                 <Route exact path = "/product/mobile"  render={() =><Category type='mobile'/>}/>
