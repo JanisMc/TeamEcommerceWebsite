@@ -13,8 +13,7 @@
   margin: 20px;
 }
 
-.productCard:hover,
-.cardCategory:hover {
+.productCard:hover{
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
