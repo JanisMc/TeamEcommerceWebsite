@@ -9,7 +9,6 @@ import './Navbar.css';
 const Navbar = () => {
     return ( 
         <nav>
-            <div className="logoLeft">SJJ Tech</div>
 
             <div className="basket">Basket</div>
                   <div class="dropdown">
