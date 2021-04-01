@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from '../img/Image'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import './CartPage.css'
 
@@ -25,7 +25,7 @@ import './CartPage.css'
             let total = (0)
             Object.entries(basket).map(([key, value]) => {
                 let run = (value.price * value.quantity)               
-                total += run                
+                total += Math.round((run + Number.EPSILON) * 100) / 100             
     })
             return total
     }
