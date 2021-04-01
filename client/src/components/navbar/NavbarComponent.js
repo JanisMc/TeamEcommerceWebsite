@@ -1,9 +1,15 @@
 import React from 'react' ;
+
+import './navbar.css';
+const navbar = () => {
+    return ( 
+        <nav>
+
 import './Navbar.css';
 const Navbar = () => {
     return ( 
         <nav>
-            <div className="logoLeft">SJJ Tech</div>
+
             <div className="basket">Basket</div>
                   <div class="dropdown">
   <button class="dropbtn">Products</button>
@@ -14,10 +20,16 @@ const Navbar = () => {
     <a href='/product/mobile'>Mobiles</a>
     <a href='/product/smartWatch'>Smartwatches</a>
     <a href='/product/accessories'>Accessories</a>
-    <a href="#">Log in</a>
+    <a href="/login">Log in</a>
   </div>
 </div>
             </nav>
+
+    )
+}
+export default navbar;
+
     )
 }
 export default Navbar;
+

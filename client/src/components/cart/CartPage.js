@@ -32,6 +32,7 @@ import './CartPage.css'
 
     return (
         <div className = "cartContainer">
+        <div className = "productContainer">
         {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
@@ -55,8 +56,8 @@ import './CartPage.css'
             <button onClick = {() => {removeFromCart(value._id)}} className ="button9">REMOVE FROM CART</button>
             </div>
         </div>
-   
-        ))}
+      ))}
+      </div>
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>
