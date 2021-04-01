@@ -15,17 +15,17 @@ mongoose.connect('mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/
     useUnifiedTopology: true
 })
 
-app.use(session({
-    store: MongoStore.create({mongoUrl: 'mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/Ecommerce?retryWrites=true&w=majority'}),
-    secret: 'keyboardcat',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        secure: false,
-        maxAge: 1000 * 60 * 60 *2,
-        sameSite: true
-    }
-}))
+// app.use(session({
+//     store: MongoStore.create({mongoUrl: 'mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/Ecommerce?retryWrites=true&w=majority'}),
+//     secret: 'keyboardcat',
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//         secure: false,
+//         maxAge: 1000 * 60 * 60 *2,
+//         sameSite: true
+//     }
+// }))
 
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))

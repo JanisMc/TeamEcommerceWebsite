@@ -6,6 +6,26 @@ nav {
   justify-content: space-around;
   align-items: center;
   /* float: right; */
+  float: right;
+  background-color: rgb(211, 237, 245);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+ 
+  height: 77px;
+  
+ 
+}
+nav ul {
+  
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* float: right; */
 
   float: right;
 
@@ -19,6 +39,7 @@ nav {
 
 }
 nav ul {
+
   justify-content: space-around;
 }
 nav ul li {
@@ -34,6 +55,9 @@ nav li a {
   background-color: rgb(211, 237, 245);
   color: rgb(0, 0, 0);
   padding: 16px 16px;
+
+  position: relative;
+
   font-size: 30px;
   border: none;
   cursor: pointer;
@@ -70,10 +94,19 @@ nav li a {
 }
 
 .logoLeft {
+  float: left;
+  margin: 20px 30px;
+  font-size: 30px;
+}
+.basket {
+  float: left;
+
+.logoLeft {
   
   font-size: 30px;
 }
 .basket {
   
+
   font-size: 30px;
 }

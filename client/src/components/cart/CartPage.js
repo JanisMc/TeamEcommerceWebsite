@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from '../img/Image'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import './CartPage.css'
 
@@ -25,13 +25,14 @@ import './CartPage.css'
             let total = (0)
             Object.entries(basket).map(([key, value]) => {
                 let run = (value.price * value.quantity)               
-                total += run                
+                total += Math.round((run + Number.EPSILON) * 100) / 100             
     })
             return total
     }
 
     return (
         <div className = "cartContainer">
+        <div className = "productContainer">
         {Object.entries(basket).map(([key, value]) => (
         
         <div className="cart">
@@ -55,8 +56,8 @@ import './CartPage.css'
             <button onClick = {() => {removeFromCart(value._id)}} className ="button9">REMOVE FROM CART</button>
             </div>
         </div>
-   
-        ))}
+      ))}
+      </div>
         <div className="checkout">
             <div className="checkout1">
                 <h2>CHECKOUT</h2>
