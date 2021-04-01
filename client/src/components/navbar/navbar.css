@@ -39,9 +39,9 @@ nav ul {
 
 }
 nav ul {
-
-  justify-content: space-around;
+justify-content: space-around;
 }
+
 nav ul li {
   list-style: none;
   padding: 5px 10px;
@@ -100,13 +100,11 @@ nav li a {
 }
 .basket {
   float: left;
+}
 
 .logoLeft {
-  
   font-size: 30px;
 }
 .basket {
-  
-
-  font-size: 30px;
+ font-size: 30px;
 }
