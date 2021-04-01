@@ -40,6 +40,7 @@ nav li a {
   background-color: rgb(211, 237, 245);
   color: rgb(0, 0, 0);
   padding: 16px 16px;
+  position: relative;
   font-size: 30px;
   border: none;
   cursor: pointer;

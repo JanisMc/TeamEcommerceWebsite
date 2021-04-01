@@ -3,7 +3,6 @@ import './navbar.css';
 const navbar = () => {
     return ( 
         <nav>
-            <div className="logoLeft">SJJ Tech</div>
             <div className="basket">Basket</div>
                   <div class="dropdown">
   <button class="dropbtn">Products</button>
@@ -14,7 +13,7 @@ const navbar = () => {
     <a href='/product/mobile'>Mobiles</a>
     <a href='/product/smartWatch'>Smartwatches</a>
     <a href='/product/accessories'>Accessories</a>
-    <a href="#">Log in</a>
+    <a href="/login">Log in</a>
   </div>
 </div>
             </nav>
