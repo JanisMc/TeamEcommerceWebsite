@@ -1,11 +1,11 @@
 const express = require ('express')
 const mongoose = require ('mongoose')
 const bodyParser = require ('body-parser')
-// const session = require ('express-session')
-// const MongoStore = require ('connect-mongo')
+const session = require ('express-session')
+const MongoStore = require ('connect-mongo')
 const cors = require ('cors')
 
-const mainRouter = require('./routes/mainRouter')
+// const mainRouter = require('./routes/mainRouter')
 const productModel = require('./models/productModel')
 
 const app = express()
@@ -15,23 +15,23 @@ mongoose.connect('mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/
     useUnifiedTopology: true
 })
 
-// app.use(session({
-//     store: MongoStore.create({mongoUrl: 'mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/Ecommerce?retryWrites=true&w=majority'}),
-//     secret: 'keyboardcat',
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: {
-//         secure: false,
-//         maxAge: 1000 * 60 * 60 *2,
-//         sameSite: true
-//     }
-// }))
+app.use(session({
+    store: MongoStore.create({mongoUrl: 'mongodb+srv://Janis:Password123abc@cluster0.qtmtc.mongodb.net/Ecommerce?retryWrites=true&w=majority'}),
+    secret: 'keyboardcat',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: false,
+        maxAge: 1000 * 60 * 60 *2,
+        sameSite: true
+    }
+}))
 
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use('/', mainRouter)
+// app.use('/', mainRouter)
 
 app.get('/products/:type', async (req, res) => {
     let data = await productModel.find({type:req.params.type})
@@ -43,16 +43,6 @@ app.get('/products/:type', async (req, res) => {
 
 app.get('/product/all', async (req, res) => {
     let products = await productModel.find({})
-
-    // if (products.length == 0) {
-    //     res.send({
-    //         success: false,
-    //         message: 'No animals found in database'
-    //     })
-    //     return
-    // }
-
-    // products = product.map(product => product.toObject())
 
     res.send({
         success: true,
@@ -75,7 +65,6 @@ app.post('/product/create', (req, res) => {
     })
 
     product.save()
-    console.log(product)
 
     res.send({
         success: true,
@@ -126,8 +115,6 @@ app.put('/product/update/:id', async (req, res) => {
 
 app.get('/product/individual/:id', async (req, res) => {
     let product = await productModel.findOne({_id: req.params.id})
-
-    console.log(req.params.id)
 
     res.send({
         data: product
